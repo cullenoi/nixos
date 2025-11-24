@@ -8,10 +8,10 @@
    ];
   home.username = "cullenoi";
   home.homeDirectory = "/home/cullenoi";
-  # home.stateVersion = "24.11";
+  home.stateVersion = "25.05";
 
   programs.home-manager.enable = true;
-
+  programs.zsh.enable = true;
   # # Shell configuration
   # programs.zsh = {
   #   enable = true;
