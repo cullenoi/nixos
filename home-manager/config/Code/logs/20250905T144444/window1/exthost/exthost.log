@@ -1,0 +1,30 @@
+2025-09-05 14:44:52.253 [info] Extension host with pid 136067 started
+2025-09-05 14:44:52.253 [info] Skipping acquiring lock for /home/cullenoi/.config/Code/User/workspaceStorage/0bf6e1da644c4bbbde8e3daf8d765322.
+2025-09-05 14:44:53.570 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-09-05 14:44:53.701 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-09-05 14:44:53.780 [info] ExtensionService#_doActivateExtension ms-vscode.cpptools, startup: false, activationEvent: 'onLanguage:cpp'
+2025-09-05 14:44:54.342 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:markdown'
+2025-09-05 14:44:54.389 [info] ExtensionService#_doActivateExtension vscode.markdown-language-features, startup: false, activationEvent: 'onLanguage:markdown'
+2025-09-05 14:44:55.655 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-09-05 14:44:56.428 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-09-05 14:44:56.614 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-09-05 14:44:57.089 [info] Eager extensions activated
+2025-09-05 14:44:57.704 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-09-05 14:44:57.718 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-09-05 14:44:57.813 [info] ExtensionService#_doActivateExtension usernamehw.errorlens, startup: false, activationEvent: 'onStartupFinished'
+2025-09-05 14:44:57.853 [info] ExtensionService#_doActivateExtension vscode.markdown-math, startup: false, activationEvent: 'api', root cause: vscode.markdown-language-features
+2025-09-05 14:44:57.911 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-09-05 14:44:57.953 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-09-05 14:44:58.198 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-09-05 15:15:56.298 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onTerminalQuickFixRequest:ms-vscode.npm-command'
+2025-09-05 15:16:23.278 [warning] ms-vscode.cpptools - Code actions of kind 'quickfix' requested but returned code action is of kind 'refactor.extract.function'. Code action will be dropped. Please check 'CodeActionContext.only' to only return requested code actions.
+2025-09-05 21:04:32.300 [info] Extension host terminating: renderer closed the MessagePort
+2025-09-05 21:04:32.500 [error] Error: Channel has been closed
+	at s (file:///nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:117:2431)
+	at Object.appendLine (file:///nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:117:2570)
+	at R.logOutputMessage (/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:290791)
+	at R.info (/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:290524)
+	at ChildProcess.<anonymous> (/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:514797)
+	at ChildProcess.emit (node:events:518:28)
+	at ChildProcess._handle.onexit (node:internal/child_process:293:12)
+2025-09-05 21:04:32.504 [info] Extension host with pid 136067 exiting with code 0

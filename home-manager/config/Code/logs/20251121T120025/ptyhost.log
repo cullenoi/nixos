@@ -1,0 +1,1 @@
+2025-11-21 12:02:50.490 [error] Failed to set sticky bit on /tmp/cullenoi-code-zsh: Error: ENOENT: no such file or directory, chmod '/tmp/cullenoi-code-zsh'

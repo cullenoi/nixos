@@ -1,0 +1,58 @@
+2025-11-21 12:00:27.708 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.python' wants API proposal 'terminalShellType' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-11-21 12:00:27.709 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.vscode-python-envs' wants API proposal 'terminalShellType' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-11-21 12:00:27.710 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'github.copilot-chat' wants API proposal 'chatReadonlyPromptReference' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2025-11-21 12:00:28.238 [info] ChatSessionStore: Migrating 0 chat sessions from storage service to file system
+2025-11-21 12:00:29.057 [info] Started local extension host with pid 8257.
+2025-11-21 12:00:32.757 [info] Settings Sync: Account status changed from uninitialized to unavailable
+2025-11-21 12:00:32.892 [info] Auto updating outdated extensions. ms-vscode.cpptools
+2025-11-21 12:00:33.970 [info] Auto updating extension ms-vscode.cpptools
+2025-11-21 12:00:34.350 [info] [perf] Render performance baseline is 415ms
+2025-11-21 12:00:56.315 [info] [Extensions]: Checking for updates. Reason: Product update
+2025-11-21 12:21:53.482 [error] [text file model] handleSaveError(51) - exit - resulted in a save error: Error: Unable to write file '/home/cullenoi/.config/nixos/flake.nix' (Error: File Modified Since) file:///home/cullenoi/.config/nixos/flake.nix
+2025-11-21 12:30:15.701 [error] Error: Unable to move/copy '/home/cullenoi/.config/nixos/host/physical/default.nix' because target '/home/cullenoi/.config/nixos/host/physical/aurora/default.nix' already exists at destination.
+    at Vft.R (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:3211:68408)
+    at async Vft.N (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:3211:66667)
+    at async e8e.m (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:681:9216)
+    at async Pit.perform (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:2155:7936)
+    at async Fit.apply (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:2155:12711)
+    at async jit.n (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:2155:18760)
+    at async jit.perform (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:2155:18417)
+    at async _it.apply (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:2155:20361)
+    at async vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:2153:109827
+    at async r (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:1786:12205)
+2025-11-21 12:30:15.715 [error] Unable to move/copy '/home/cullenoi/.config/nixos/host/physical/default.nix' because target '/home/cullenoi/.config/nixos/host/physical/aurora/default.nix' already exists at destination.: Error: Unable to move/copy '/home/cullenoi/.config/nixos/host/physical/default.nix' because target '/home/cullenoi/.config/nixos/host/physical/aurora/default.nix' already exists at destination.
+    at Vft.R (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:3211:68408)
+    at async Vft.N (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:3211:66667)
+    at async e8e.m (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:681:9216)
+    at async Pit.perform (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:2155:7936)
+    at async Fit.apply (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:2155:12711)
+    at async jit.n (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:2155:18760)
+    at async jit.perform (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:2155:18417)
+    at async _it.apply (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:2155:20361)
+    at async vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:2153:109827
+    at async r (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:1786:12205)
+2025-11-21 13:32:18.536 [error] An unknown error occurred. Please consult the log for more details.
+2025-11-21 19:00:17.967 [error] TreeError [DebugRepl] Tree input not set: Error: TreeError [DebugRepl] Tree input not set
+    at Wf.C (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:414:29043)
+    at Wf.updateChildren (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:414:28950)
+    at Hse.value (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:2081:33670)
+    at E.B (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:29:2392)
+    at E.C (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:29:2462)
+    at E.fire (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:29:2680)
+    at uCe.setVisible (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:648:2729)
+    at vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:1287:11771
+    at Array.map (<anonymous>)
+    at cu.setVisible (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:1287:11762)
+2025-11-21 21:35:08.052 [error] Cannot register two commands with the same id: _workbench.openUserSettingsEditor: Error: Cannot register two commands with the same id: _workbench.openUserSettingsEditor
+    at A (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:34:31760)
+    at t (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:1864:81497)
+    at Hse.value (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:1864:81817)
+    at E.B (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:29:2392)
+    at E.C (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:29:2462)
+    at E.fire (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:29:2680)
+    at aqs.updateCurrentProfile (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:3211:89449)
+    at UGe.z (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:1840:76868)
+    at Hse.value (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:1840:74572)
+    at E.B (vscode-file://vscode-app/nix/store/fy8fpckq8q2k2ldhhmf2q3m81mgk2d5f-vscode-1.99.3/lib/vscode/resources/app/out/vs/workbench/workbench.desktop.main.js:29:2392)
+2025-11-21 22:07:27.079 [error] [text file model] handleSaveError(9) - exit - resulted in a save error: Error: Unable to write file '/home/cullenoi/.config/nixos/hosts/modules/default.nix' (Error: File Modified Since) file:///home/cullenoi/.config/nixos/hosts/modules/default.nix
+2025-11-21 22:07:51.677 [error] [text file model] handleSaveError(9) - exit - resulted in a save error: Error: Unable to write file '/home/cullenoi/.config/nixos/hosts/modules/default.nix' (Error: File Modified Since) file:///home/cullenoi/.config/nixos/hosts/modules/default.nix

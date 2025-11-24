@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<openbox_menu>
+  <menu id="power-menu" label="Power">
+    <item label="Shutdown">
+      <action name="Execute">
+        <command>shutdown now</command>
+      </action>
+    </item>
+    <item label="Reboot">
+      <action name="Execute">
+        <command>reboot</command>
+      </action>
+    </item>
+    <item label="Suspend">
+      <action name="Execute">
+        <command>systemctl suspend</command>
+      </action>
+    </item>
+    <item label="Hibernate">
+      <action name="Execute">
+        <command>systemctl hibernate</command>
+      </action>
+    </item>
+    <item label="Lock Screen">
+      <action name="Execute">
+        <command>hyprlock</command>
+      </action>
+    </item>
+  </menu>
+</openbox_menu>

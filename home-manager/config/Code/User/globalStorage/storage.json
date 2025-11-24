@@ -1,0 +1,88 @@
+{
+    "telemetry.sqmId": "",
+    "telemetry.machineId": "68a1fa889f09d2dd1fbbd067dce6f1c8af658baf0511b35d07e65a1568fb4e7c",
+    "telemetry.devDeviceId": "f005dc58-f64b-4121-bdb4-2d5a7f1e3e36",
+    "backupWorkspaces": {
+        "workspaces": [],
+        "folders": [
+            {
+                "folderUri": "file:///home/cullenoi/.config/waybar"
+            },
+            {
+                "folderUri": "file:///home/cullenoi/Code/C_Practice"
+            },
+            {
+                "folderUri": "file:///home/cullenoi/.config/nixos"
+            }
+        ],
+        "emptyWindows": []
+    },
+    "windowControlHeight": 42,
+    "profileAssociations": {
+        "workspaces": {
+            "file:///home/cullenoi/.config/ghostty": "__default__profile__",
+            "file:///home/cullenoi/.config/hypr": "__default__profile__",
+            "file:///home/cullenoi/.config/waybar": "__default__profile__",
+            "file:///home/cullenoi/Code/OPENGL/Animation": "__default__profile__",
+            "file:///home/cullenoi/Code/C_Practice": "__default__profile__",
+            "file:///home/cullenoi/.config/mpv": "__default__profile__",
+            "file:///home/cullenoi": "__default__profile__",
+            "file:///home/cullenoi/.config/nvim": "__default__profile__",
+            "file:///home/cullenoi/.config/Code": "__default__profile__",
+            "file:///home/cullenoi/Code/Job%20Interview": "__default__profile__",
+            "file:///home/cullenoi/Code/Bluedrop": "__default__profile__",
+            "file:///home/cullenoi/Code/MAI/MAIProj": "__default__profile__",
+            "file:///home/cullenoi/Code/MAI/MAIProj/A7670E-dev": "__default__profile__",
+            "file:///home/cullenoi/Documents/temp": "__default__profile__",
+            "file:///home/cullenoi/.config/nixos": "__default__profile__",
+            "file:///nix/store/kj5zf2ppwm7mgkz6jxi3km9klq612yri-source/home-manager/cullenoi/programs": "__default__profile__",
+            "file:///home/cullenoi/Code/Bluedrop/nix-dotfiles/hyprland/nixos-hyprland-flake": "__default__profile__"
+        },
+        "emptyWindows": {}
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#1f1f1f",
+    "windowSplash": {
+        "zoomLevel": 0,
+        "baseTheme": "vs-dark",
+        "colorInfo": {
+            "foreground": "#cccccc",
+            "background": "#1f1f1f",
+            "editorBackground": "#1f1f1f",
+            "titleBarBackground": "#181818",
+            "titleBarBorder": "#2b2b2b",
+            "activityBarBackground": "#181818",
+            "activityBarBorder": "#2b2b2b",
+            "sideBarBackground": "#181818",
+            "sideBarBorder": "#2b2b2b",
+            "statusBarBackground": "#181818",
+            "statusBarBorder": "#2b2b2b",
+            "statusBarNoFolderBackground": "#1f1f1f"
+        },
+        "layoutInfo": {
+            "sideBarSide": "left",
+            "editorPartMinWidth": 220,
+            "titleBarHeight": 35,
+            "activityBarWidth": 48,
+            "sideBarWidth": 232,
+            "auxiliarySideBarWidth": 0,
+            "statusBarHeight": 22,
+            "windowBorder": false
+        }
+    },
+    "windowsState": {
+        "lastActiveWindow": {
+            "folder": "file:///home/cullenoi/.config/nixos",
+            "backupPath": "/home/cullenoi/.config/Code/Backups/202be78a5e8a7740016c679ca7565443",
+            "uiState": {
+                "mode": 1,
+                "x": 17,
+                "y": 47,
+                "width": 1886,
+                "height": 1016,
+                "zoomLevel": 1
+            }
+        },
+        "openedWindows": []
+    }
+}
