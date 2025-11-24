@@ -44,6 +44,7 @@
         system = "x86_64-linux";
         modules = [ 
           ./hosts/work
+          home-manager.nixosModules.home-manager
           mangowc.nixosModules.mango
           # {
           #   programs.mango.enable = true;

@@ -56,7 +56,7 @@
     nerdfonts
     meslo-lgs-nf
   ];
-  programs.mangowc.enable = true;
+  # programs.mangowc.enable = true;
   # Environment variables
   environment.variables = {
     XCURSOR_THEME = "Bibata-Modern-Classic";
