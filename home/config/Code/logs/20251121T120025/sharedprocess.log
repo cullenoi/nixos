@@ -1,0 +1,31 @@
+2025-11-21 12:00:33.983 [info] Getting Manifest... ms-vscode.cpptools
+2025-11-21 12:00:34.134 [info] Installing extension: ms-vscode.cpptools {"productVersion":{"version":"1.99.3","date":"2025-04-15T23:18:46.076Z"},"pinned":false,"operation":3,"isApplicationScoped":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/cullenoi/.vscode/extensions/extensions.json","path":"/home/cullenoi/.vscode/extensions/extensions.json","scheme":"vscode-userdata"}}
+2025-11-21 12:00:45.892 [info] Extension signature verification result for ms-vscode.cpptools: UnknownError. Internal Code: 159. Executed: true. Duration: 67ms.
+2025-11-21 12:00:53.696 [info] Extracted extension to file:///home/cullenoi/.vscode/extensions/ms-vscode.cpptools-1.28.3-linux-x64: ms-vscode.cpptools
+2025-11-21 12:00:53.759 [info] Renamed to /home/cullenoi/.vscode/extensions/ms-vscode.cpptools-1.28.3-linux-x64
+2025-11-21 12:00:53.826 [info] Marked extension as removed ms-vscode.cpptools-1.26.3-linux-x64
+2025-11-21 12:00:53.880 [info] Extension installed successfully: ms-vscode.cpptools vscode-userdata:/home/cullenoi/.vscode/extensions/extensions.json
+2025-11-21 13:32:12.083 [info] Getting Manifest... pinage404.nix-extension-pack
+2025-11-21 13:32:12.541 [info] Installing extension: pinage404.nix-extension-pack {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/cullenoi/.vscode/extensions/extensions.json","path":"/home/cullenoi/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"productVersion":{"version":"1.99.3","date":"2025-04-15T23:18:46.076Z"}}
+2025-11-21 13:32:13.112 [info] Getting Manifest... jnoortheen.nix-ide
+2025-11-21 13:32:13.575 [info] Getting Manifest... mkhl.direnv
+2025-11-21 13:32:14.020 [info] Getting Manifest... arrterian.nix-env-selector
+2025-11-21 13:32:14.566 [info] Installing extension: jnoortheen.nix-ide {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/cullenoi/.vscode/extensions/extensions.json","path":"/home/cullenoi/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"productVersion":{"version":"1.99.3","date":"2025-04-15T23:18:46.076Z"},"context":{"dependecyOrPackExtensionInstall":true}}
+2025-11-21 13:32:14.566 [info] Installing extension: mkhl.direnv {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/cullenoi/.vscode/extensions/extensions.json","path":"/home/cullenoi/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"productVersion":{"version":"1.99.3","date":"2025-04-15T23:18:46.076Z"},"context":{"dependecyOrPackExtensionInstall":true}}
+2025-11-21 13:32:14.567 [info] Installing extension: arrterian.nix-env-selector {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/cullenoi/.vscode/extensions/extensions.json","path":"/home/cullenoi/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"productVersion":{"version":"1.99.3","date":"2025-04-15T23:18:46.076Z"},"context":{"dependecyOrPackExtensionInstall":true}}
+2025-11-21 13:32:14.976 [info] Extension signature verification result for mkhl.direnv: UnknownError. Internal Code: 159. Executed: true. Duration: 35ms.
+2025-11-21 13:32:15.023 [info] Extension signature verification result for jnoortheen.nix-ide: UnknownError. Internal Code: 159. Executed: true. Duration: 31ms.
+2025-11-21 13:32:15.061 [info] Extracted extension to file:///home/cullenoi/.vscode/extensions/mkhl.direnv-0.17.0: mkhl.direnv
+2025-11-21 13:32:15.074 [info] Renamed to /home/cullenoi/.vscode/extensions/mkhl.direnv-0.17.0
+2025-11-21 13:32:15.145 [info] Extracted extension to file:///home/cullenoi/.vscode/extensions/jnoortheen.nix-ide-0.5.0: jnoortheen.nix-ide
+2025-11-21 13:32:15.158 [info] Renamed to /home/cullenoi/.vscode/extensions/jnoortheen.nix-ide-0.5.0
+2025-11-21 13:32:15.580 [info] Extension signature verification result for arrterian.nix-env-selector: UnknownError. Internal Code: 159. Executed: true. Duration: 30ms.
+2025-11-21 13:32:15.808 [info] Extension signature verification result for pinage404.nix-extension-pack: UnknownError. Internal Code: 159. Executed: true. Duration: 31ms.
+2025-11-21 13:32:15.846 [info] Extracted extension to file:///home/cullenoi/.vscode/extensions/pinage404.nix-extension-pack-3.0.0: pinage404.nix-extension-pack
+2025-11-21 13:32:15.860 [info] Renamed to /home/cullenoi/.vscode/extensions/pinage404.nix-extension-pack-3.0.0
+2025-11-21 13:32:15.972 [info] Extracted extension to file:///home/cullenoi/.vscode/extensions/arrterian.nix-env-selector-1.1.0: arrterian.nix-env-selector
+2025-11-21 13:32:15.982 [info] Renamed to /home/cullenoi/.vscode/extensions/arrterian.nix-env-selector-1.1.0
+2025-11-21 13:32:16.047 [info] Extension installed successfully: mkhl.direnv vscode-userdata:/home/cullenoi/.vscode/extensions/extensions.json
+2025-11-21 13:32:16.048 [info] Extension installed successfully: jnoortheen.nix-ide vscode-userdata:/home/cullenoi/.vscode/extensions/extensions.json
+2025-11-21 13:32:16.048 [info] Extension installed successfully: pinage404.nix-extension-pack vscode-userdata:/home/cullenoi/.vscode/extensions/extensions.json
+2025-11-21 13:32:16.049 [info] Extension installed successfully: arrterian.nix-env-selector vscode-userdata:/home/cullenoi/.vscode/extensions/extensions.json

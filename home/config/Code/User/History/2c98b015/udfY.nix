@@ -1,0 +1,337 @@
+{ config, pkgs, ... }:
+   imports = [
+    ./programs
+    ./services
+    ./themes
+   ]
+{
+  home.username = "cullenoi";
+  home.homeDirectory = "/home/cullenoi";
+  home.stateVersion = "24.11";
+
+  programs.home-manager.enable = true;
+
+#TERMINAL
+  programs = {
+   zsh = {
+      enable = true;
+      autosuggestions.enable = true;
+      zsh-autoenv.enable = true;
+      syntaxHighlighting.enable = true;
+      ohMyZsh = {
+         enable = true;
+         theme = "robbyrussell";
+         plugins = [
+           "git"
+           "npm"
+           "history"
+           "node"
+           "rust"
+           "deno"
+         ];
+      };
+   };
+};
+
+  # User packages (available on ALL machines)
+  home.packages = with pkgs; [
+    git
+    vim
+    tmux
+    htop
+    tree
+    jq
+    curl
+    wget
+    tig
+    nano
+  ];
+
+  # Environment variables
+  home.sessionVariables = {
+    XCURSOR_THEME = "Bibata-Modern-Classic";
+    XCURSOR_SIZE = "24";
+    EDITOR = "nvim";
+  };
+
+  # Git configuration
+  programs.git = {
+    enable = true;
+    userName = "Cullen O";
+    userEmail = "cullen@example.com";
+    extraConfig = {
+      init.defaultBranch = "main";
+      pull.rebase = false;
+    };
+  };
+
+  # ZSH configuration
+  programs.zsh = {
+    enable = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+    ohMyZsh = {
+      enable = true;
+      theme = "robbyrussell";
+      plugins = [
+        "git"
+        "npm" 
+        "history"
+        "node"
+        "rust"
+        "deno"
+      ];
+    };
+    
+    shellAliases = {
+      ll = "ls -l";
+      la = "ls -la";
+      update = "sudo nixos-rebuild switch --flake ~/.config/nixos/#$(hostname -s)";
+      hm-update = "home-manager switch --flake ~/.config/nixos/#$(hostname -s)";
+    };
+    
+    initExtra = ''
+      export PATH=$HOME/.local/bin:$PATH
+    '';
+  };
+
+  # Neovim configuration
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+  };
+
+  # Starship prompt
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  # Yazi file manager
+  programs.yazi = {
+    enable = true;
+  };
+
+  # GTK configuration
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Adwaita";
+      package = pkgs.gnome-themes-extra;
+    };
+    iconTheme = {
+      name = "Adwaita";
+      package = pkgs.adwaita-icon-theme;
+    };
+    cursorTheme = {
+      name = "Bibata-Modern-Classic";
+      package = pkgs.bibata-cursors;
+    };
+  };
+
+  # Services
+  services = {
+    network-manager-applet.enable = true;
+  };
+}
+
+###################################
+# { config, pkgs, ... }:
+
+# {
+#   home.username = "cullenoi";
+#   home.homeDirectory = "/home/cullenoi";
+#   home.stateVersion = "24.11";
+
+#   programs.home-manager.enable = true;
+
+#   # Packages that should be available to your user
+#   home.packages = with pkgs; [
+    
+#     # Music
+#     spotify
+
+#     # Editors & Dev Tools
+#     vscode
+#     git
+#     ripgrep
+#     fd
+#     gcc
+#     meson
+    
+#     # Screenshot & Utilities
+#     hyprshot
+#     slurp
+#     wget
+#     htop
+#     busybox
+#     scdoc
+#     mpv
+    
+#     # Rice & Desktop
+#     playerctl
+#     bibata-cursors
+#     waybar
+#     adwaita-icon-theme
+#     polkit_gnome
+#     gnome-keyring
+#     power-profiles-daemon
+#     wayland-protocols
+#     wayland-utils
+#     wl-clipboard
+#     wlroots
+#     swayidle
+#     swaylock-effects
+#     upower
+#     dunst
+#     libnotify
+#     swww
+#     ghostty
+#     rofi-wayland
+#     signaldctl
+#     networkmanagerapplet
+#     pavucontrol
+#     starship
+#     lutris
+    
+#     # Terminal & Shell
+#     nerdfonts
+#     meslo-lgs-nf
+    
+#     # File Manager
+#     yazi
+#   ];
+
+#   # Environment variables
+#   home.sessionVariables = {
+#     XCURSOR_THEME = "Bibata-Modern-Classic";
+#     XCURSOR_SIZE = "24";
+#     EDITOR = "nvim";
+#   };
+
+#   # Git configuration
+#   programs.git = {
+#     enable = true;
+#     userName = "Cullen O";
+#     userEmail = "cullen@example.com"; # Change this!
+#     extraConfig = {
+#       init.defaultBranch = "main";
+#       pull.rebase = false;
+#     };
+#   };
+
+#   # Shell config
+#   programs.zsh = {
+#     enable = true;
+#     autosuggestion.enable = true;
+#     syntaxHighlighting.enable = true;
+#     ohMyZsh = {
+#       enable = true;
+#       theme = "robbyrussell";
+#       plugins = [
+#         "git"
+#         "npm" 
+#         "history"
+#         "node"
+#         "rust"
+#         "deno"
+#       ];
+#     };
+    
+#     shellAliases = {
+#       ll = "ls -l";
+#       la = "ls -la";
+#       update = "sudo nixos-rebuild switch --flake ~/.config/nixos/#$(hostname -s)";
+#       hm-update = "home-manager switch --flake ~/.config/nixos/#$(hostname -s)";
+#     };
+    
+#     initExtra = ''
+#       # Custom zsh configuration
+#       export PATH=$HOME/.local/bin:$PATH
+#     '';
+#   };
+
+#   # Neovim configuration
+#   programs.neovim = {
+#     enable = true;
+#     defaultEditor = true;
+#     viAlias = true;
+#     vimAlias = true;
+#   };
+
+#   # Starship prompt
+#   programs.starship = {
+#     enable = true;
+#     enableZshIntegration = true;
+#     # Add your starship config here or use the default
+#   };
+
+#   # Yazi file manager configuration
+#   programs.yazi = {
+#     enable = true;
+#     # Add your yazi config here
+#   };
+
+#   # Browser configurations
+#   programs.firefox = {
+#     enable = true;
+#     # Add your Firefox preferences here
+#   };
+
+#   # GTK configuration (for theming)
+#   gtk = {
+#     enable = true;
+#     theme = {
+#       name = "Adwaita";
+#       package = pkgs.gnome-themes-extra;
+#     };
+#     iconTheme = {
+#       name = "Adwaita";
+#       package = pkgs.adwaita-icon-theme;
+#     };
+#     cursorTheme = {
+#       name = "Bibata-Modern-Classic";
+#       package = pkgs.bibata-cursors;
+#     };
+#   };
+
+#   # Services
+#   services = {
+#     # Network Manager applet
+#     network-manager-applet.enable = true;
+    
+#     # Bluetooth applet (useful for laptops)
+#     blueman-applet.enable = true;
+#   };
+
+#   # XDG configuration
+#   xdg = {
+#     enable = true;
+#     configHome = "${config.home.homeDirectory}/.config";
+    
+#     # MIME applications
+#     mimeApps = {
+#       enable = true;
+#       defaultApplications = {
+#         "text/html" = [ "firefox.desktop" ];
+#         "x-scheme-handler/http" = [ "firefox.desktop" ];
+#         "x-scheme-handler/https" = [ "firefox.desktop" ];
+#         "x-scheme-handler/about" = [ "firefox.desktop" ];
+#         "x-scheme-handler/unknown" = [ "firefox.desktop" ];
+#       };
+#     };
+#   };
+
+#   # Dotfiles and custom configurations
+#   home.file = {
+#     # Example: Custom scripts
+#     ".local/bin/my-script".source = ./scripts/my-script.sh;
+    
+#     # Example: Custom configuration files
+#     ".config/my-app/config".text = ''
+#       # Your custom config
+#     '';
+#   };
+# }

@@ -1,0 +1,41 @@
+[CertifySettings]
+ExportCheckState=false
+LastKey=DDD312D0F36F468D47A7C0FB96254BD54979ADCE
+PublishCheckState=false
+
+[EMailOperations]
+decrypt-verify-popup-geometry=1920,0,936,501
+
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/Documents/enda_0x4979ADCE_public.asc,file:$HOME/Documents/enda_0x4979ADCE_public.asc
+Recent URLs[$e]=file:$HOME/Documents/
+detailViewIconSize=16
+
+[KeyTreeView_default]
+Expanded=DDD312D0F36F468D47A7C0FB96254BD54979ADCE
+
+[MainWindow]
+1920x1080 screen: Window-Maximized=true
+3 screens: Height=1080
+3 screens: Width=1920
+3 screens: Window-Maximized=true
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAAAAA6gAAAOoAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+
+[Self-Test]
+last-selftest-version=1
+
+[SignEncryptKeys]
+EncryptKey=DDD312D0F36F468D47A7C0FB96254BD54979ADCE
+SigningKey=DDD312D0F36F468D47A7C0FB96254BD54979ADCE
+
+[View #0]
+column-sizes=260,260,82,96,94,0,161,0,0,0,0,0,0,0
+hierarchical-view=true
+key-filter=all-certificates
+magic=262254561
+sort-column=0
+sort-descending=false
+string-filter=
+title=All Certificates

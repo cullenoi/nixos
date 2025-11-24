@@ -1,0 +1,10 @@
+file:///home/cullenoi/.config/nixos/hosts/modules/audio.nix {"mtime":1763931935063,"ctime":1763931935063,"size":0,"etag":"3f7djsq930","orphaned":false,"typeId":""}
+sound.enable = true;
+security.rtkit.enable = true;
+services.pipewire = {
+  enable = true;
+  alsa.enable = true;
+  alsa.support32Bit = true;
+  pulse.enable = true;
+  jack.enable = true;
+};

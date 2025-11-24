@@ -1,0 +1,16 @@
+2025-09-01 11:47:21.622 [info] Extension host with pid 3402 started
+2025-09-01 11:47:21.623 [info] Skipping acquiring lock for /home/cullenoi/.config/Code/User/workspaceStorage/8dd67708b75a72f380a7b99922fa9d65.
+2025-09-01 11:47:22.060 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-09-01 11:47:22.146 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-09-01 11:47:22.449 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-09-01 11:47:22.538 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-09-01 11:47:22.701 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-09-01 11:47:23.004 [info] Eager extensions activated
+2025-09-01 11:47:23.164 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-09-01 11:47:23.171 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-09-01 11:47:23.255 [info] ExtensionService#_doActivateExtension usernamehw.errorlens, startup: false, activationEvent: 'onStartupFinished'
+2025-09-01 11:47:23.283 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-09-01 11:47:23.318 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-09-01 11:47:23.573 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-09-01 11:57:59.177 [info] Extension host terminating: renderer closed the MessagePort
+2025-09-01 11:57:59.250 [info] Extension host with pid 3402 exiting with code 0

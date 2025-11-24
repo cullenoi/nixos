@@ -4,14 +4,18 @@
   networking.hostName = "work";
 
   # Work-specific hardware
-  imports = [ ./hardware-configuration.nix ];
+  imports = [ ./hardware-configuration.nix];
 
   # Bootloader
-  boot.loader.grub = {
-    enable = true;
-    device = "/dev/nvme0n1";
-    useOSProber = true;
-  };
+  # boot.loader.grub = {
+  #   enable = true;
+  #   device = "/dev/nvme0n1";
+  #   useOSProber = true;
+  # };
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
+    services.xserver.enable = true;
 
   # Time and locale
   time.timeZone = "Europe/Dublin";
@@ -52,7 +56,7 @@
     nerdfonts
     meslo-lgs-nf
   ];
-
+  programs.mangowc.enable = true;
   # Environment variables
   environment.variables = {
     XCURSOR_THEME = "Bibata-Modern-Classic";
@@ -71,4 +75,7 @@
   environment.systemPackages = with pkgs; [
     teams
   ];
+
+    system.stateVersion = "25.05"; # Did you read the comment?
+
 }

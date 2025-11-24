@@ -6,11 +6,14 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
+    mangowc = {
+      url = "github:DreamMaoMao/mangowc";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
   };
 
-  outputs = { self, nixpkgs, home-manager }: {
+  outputs = { self, nixpkgs, home-manager, mangowc }: {
     nixosConfigurations = {
       laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -41,10 +44,14 @@
         system = "x86_64-linux";
         modules = [ 
           ./hosts/work
+          mangowc.nixosModules.mango
+          # {
+          #   programs.mango.enable = true;
+          # }
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.cullenoi = import ./home-manager/default.nix;
+            home-manager.users.cullenoi = import ./home/cullenoi/default.nix;
           }
         ];
       };

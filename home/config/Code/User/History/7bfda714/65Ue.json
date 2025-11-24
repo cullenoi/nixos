@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "loadcell.h": "c",
+        "stdlib.h": "c",
+        "stdint.h": "c"
+    }
+}

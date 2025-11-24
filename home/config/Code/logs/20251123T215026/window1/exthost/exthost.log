@@ -1,0 +1,21 @@
+2025-11-23 21:50:32.950 [info] Extension host with pid 2089 started
+2025-11-23 21:50:32.950 [info] Skipping acquiring lock for /home/cullenoi/.config/Code/User/workspaceStorage/5719bcc6c5ded247d9e135249ba18e6a.
+2025-11-23 21:50:34.028 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-11-23 21:50:34.131 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-11-23 21:50:34.194 [info] ExtensionService#_doActivateExtension arrterian.nix-env-selector, startup: false, activationEvent: 'onLanguage'
+2025-11-23 21:50:34.339 [info] ExtensionService#_doActivateExtension mkhl.direnv, startup: false, activationEvent: 'onLanguage'
+2025-11-23 21:50:34.356 [info] ExtensionService#_doActivateExtension jnoortheen.nix-ide, startup: false, activationEvent: 'onLanguage:nix'
+2025-11-23 21:50:35.018 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-11-23 21:50:35.474 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-11-23 21:50:35.658 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-11-23 21:50:35.961 [info] Eager extensions activated
+2025-11-23 21:50:36.018 [error] TypeError: c2.call is not a function
+	at /home/cullenoi/.vscode/extensions/arrterian.nix-env-selector-1.1.0/dist/index.js:26377:90
+2025-11-23 21:50:36.122 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-11-23 21:50:36.130 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-11-23 21:50:36.198 [info] ExtensionService#_doActivateExtension usernamehw.errorlens, startup: false, activationEvent: 'onStartupFinished'
+2025-11-23 21:50:36.385 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-11-23 21:50:36.412 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-11-23 21:50:36.585 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-11-23 22:19:50.000 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onTerminalQuickFixRequest:ms-vscode.npm-command'
+2025-11-23 22:20:13.379 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'

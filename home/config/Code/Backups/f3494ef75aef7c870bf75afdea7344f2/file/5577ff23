@@ -1,0 +1,16 @@
+file:///home/cullenoi/.config/waybar/shell.nix {"mtime":1747607969541,"ctime":1747605556403,"size":396,"etag":"3e90o35b8co","orphaned":false,"typeId":""}
+{ pkgs ? import <nixpkgs> {} }:
+
+pkgs.mkShell {
+  buildInputs = [
+    pkgs.python3
+    pkgs.python3Packages.pygobject3
+    pkgs.gobject-introspection
+    pkgs.playerctl
+  ];
+
+  shellHook = ''
+    export GI_TYPELIB_PATH=${pkgs.playerctl}/lib/girepository-1.0:$GI_TYPELIB_PATH
+    export PYTHONPATH=${pkgs.python3Packages.pygobject3}/lib/${pkgs.python3.libPrefix}/site-packages:$PYTHONPATH
+  '';
+}

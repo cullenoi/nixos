@@ -1,0 +1,101 @@
+untitled:Untitled-1 {"typeId":""}
+ # Terminal & Shell
+    starship
+    ripgrep
+    fd
+    bat
+    eza
+    fzf
+    
+    # Development
+    git
+    gcc
+    nodejs
+    python3
+    rustc
+    cargo
+    
+    # Utilities
+    wget
+    curl
+    htop
+    busybox
+    mpv
+    playerctl
+    
+    # Desktop utilities
+    dunst
+    libnotify
+    swww
+    wl-clipboard
+    slurp
+    hyprshot
+    
+    # Crypto
+    electrum
+    gnupg
+    pinentry
+    kleopatra
+    
+    # Browsers
+    tor
+    tor-browser
+    
+    # Music
+    spotify
+    
+    # Screenshot
+    hyprshot
+    slurp
+    
+    # Code libs
+    scdoc
+    mpv
+    
+    # Rice
+    playerctl
+    bibata-cursors
+    waybar
+    adwaita-icon-theme
+    
+    # Wayland
+    meson
+    wayland-protocols
+    wayland-utils
+    wl-clipboard
+    wlroots
+    
+    # Lock screen
+    swayidle
+    swaylock-effects
+    
+    # Notifications
+    dunst
+    libnotify
+    
+    # Wallpaper
+    swww
+    
+    # Terminal
+    ghostty
+    
+    # App launcher
+    rofi-wayland
+    
+    # Messaging
+    signaldctl
+    
+    # Network
+    networkmanagerapplet
+    
+    # Audio
+    pavucontrol
+    
+    # Shell
+    starship
+    
+    # Gaming
+    lutris
+    
+    # File manager
+    yazi
