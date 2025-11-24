@@ -11,22 +11,22 @@
   home.stateVersion = "25.05";
 
   programs.home-manager.enable = true;
-  programs.zsh.enable = true;
+  # programs.zsh.enable = true;
   # # Shell configuration
-  # programs.zsh = {
-  #   enable = true;
-  #   enableCompletion = true;
-  #   autosuggestion.enable = true;
-  #   syntaxHighlighting.enable = true;
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
 
-  #   shellAliases = {
-  #     ll = "ls -la";
-  #     ".." = "cd ..";
-  #     "..." = "cd ../..";
-  #     rebuild = "sudo nixos-rebuild switch --flake ~/nixos#$(hostname)";
-  #     update = "cd ~/nixos && nix flake update && sudo nixos-rebuild switch --flake .#$(hostname)";
-  #   };
-  # };
+    shellAliases = {
+      ll = "ls -la";
+      ".." = "cd ..";
+      "..." = "cd ../..";
+      rebuild = "sudo nixos-rebuild switch --flake ~/nixos#$(hostname)";
+      update = "cd ~/nixos && nix flake update && sudo nixos-rebuild switch --flake .#$(hostname)";
+    };
+  };
 
   # User packages (available on ALL machines)
   home.packages = with pkgs; [
