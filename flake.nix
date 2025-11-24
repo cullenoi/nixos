@@ -24,6 +24,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.cullenoi = import ./home-manager/cullenoi/default.nix;
+            home-manager.users.cullenoi.imports = [ mangowc.hmModules.mango ];
           }
         ];
       };
@@ -46,9 +47,9 @@
           ./hosts/work
           home-manager.nixosModules.home-manager
           mangowc.nixosModules.mango
-          # {
-          #   programs.mango.enable = true;
-          # }
+          {
+            programs.mango.enable = true;
+          }
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

@@ -5,10 +5,11 @@
     # ./modules
     # ./services
     # ./themes
+    mangowc.hmModules.mango
    ];
   home.username = "cullenoi";
   home.homeDirectory = "/home/cullenoi";
-  home.stateVersion = "25.05";
+  home.stateVersion = "24.11";
 
   programs.home-manager.enable = true;
   # programs.zsh.enable = true;
@@ -27,6 +28,7 @@
       update = "cd ~/nixos && nix flake update && sudo nixos-rebuild switch --flake .#$(hostname)";
     };
   };
+
 
   # User packages (available on ALL machines)
   home.packages = with pkgs; [
