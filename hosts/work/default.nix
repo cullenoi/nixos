@@ -2,7 +2,7 @@
 
 {
   networking.hostName = "work";
-
+  networking.networkmanager.enable = true;
   # Work-specific hardware
   imports = [ ./hardware-configuration.nix];
 
@@ -49,12 +49,10 @@
   nixpkgs.config.allowUnfree = true;
 
   # Default shell
-  users.defaultUserShell = pkgs.zsh;
 
   # Fonts
   fonts.packages = with pkgs; [
-    nerdfonts
-    meslo-lgs-nf
+  nerd-fonts.meslo-lg
   ];
   # programs.mangowc.enable = true;
   # Environment variables
@@ -71,9 +69,27 @@
   security.polkit.enable = true;
   security.pam.services.swaylock = {};
 
-  # Work-specific packages
+  programs.firefox.enable = true;
+
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
+####
   environment.systemPackages = with pkgs; [
-    teams
+    tree
+    vim
+    wget
+    foot
+    waybar
+    kitty
+    ghostty
+    # dolphin
+    wofi
+    starship
+    swww
+    teams-for-linux
   ];
 
     system.stateVersion = "25.05"; # Did you read the comment?

@@ -5,12 +5,15 @@
     # ./modules
     # ./services
     # ./themes
-    mangowc.hmModules.mango
    ];
   home.username = "cullenoi";
   home.homeDirectory = "/home/cullenoi";
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.05";
 
+
+  home.file.".config/hypr".source = ../config/hypr;
+  home.file.".config/waybar".source = ../config/waybar;
+  home.file.".config/rofi".source = ../config/rofi;
   programs.home-manager.enable = true;
   # programs.zsh.enable = true;
   # # Shell configuration
@@ -32,6 +35,7 @@
 
   # User packages (available on ALL machines)
   home.packages = with pkgs; [
+    vscode
     git
     vim
     tmux
