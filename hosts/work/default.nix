@@ -5,6 +5,7 @@
   networking.networkmanager.enable = true;
   # Work-specific hardware
   imports = [ ./hardware-configuration.nix
+  ../modules/bootloader.nix
   ../modules/hyprland.nix];
 
   # Bootloader
@@ -13,8 +14,7 @@
   #   device = "/dev/nvme0n1";
   #   useOSProber = true;
   # };
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+
 
   services.xserver = {
     enable = true;
