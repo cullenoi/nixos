@@ -89,6 +89,7 @@ services.gnome.gnome-keyring.enable = true;
     vim
     wget
     #Setup specific
+    wlogout
     dunst
     waybar
     networkmanagerapplet
