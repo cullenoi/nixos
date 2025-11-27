@@ -6,7 +6,8 @@
   # Work-specific hardware
   imports = [ ./hardware-configuration.nix
   ../modules/bootloader.nix
-  ../modules/hyprland.nix];
+  ../modules/hyprland.nix
+  ../modules/theme.nix];
 
   # Bootloader
   # boot.loader.grub = {
@@ -65,10 +66,6 @@
   ];
   # programs.mangowc.enable = true;
   # Environment variables
-  environment.variables = {
-    XCURSOR_THEME = "Catppuccin-Macchiato-Teal";
-    XCURSOR_SIZE = "24";
-  };
 
   # XDG portals
   xdg.portal.enable = true;
@@ -89,6 +86,7 @@ services.gnome.gnome-keyring.enable = true;
     vim
     wget
     #Setup specific
+    avizo
     wlogout
     dunst
     waybar
