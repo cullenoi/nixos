@@ -11,6 +11,7 @@
   home.stateVersion = "25.05";
 
   #cheeky little 
+  home.file.".config/dunst".source = ../config/dunst;
   home.file.".config/hypr".source = ../config/hypr;
   home.file.".config/waybar".source = ../config/waybar;
   home.file.".config/rofi".source = ../config/rofi;

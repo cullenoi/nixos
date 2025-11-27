@@ -4,7 +4,8 @@
   networking.hostName = "work";
   networking.networkmanager.enable = true;
   # Work-specific hardware
-  imports = [ ./hardware-configuration.nix];
+  imports = [ ./hardware-configuration.nix
+  ../modules/hyprland.nix];
 
   # Bootloader
   # boot.loader.grub = {
@@ -79,11 +80,6 @@
 
   programs.firefox.enable = true;
 
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-
 ####
 
 ## keyring:
@@ -93,9 +89,7 @@ services.gnome.gnome-keyring.enable = true;
     vim
     wget
     #Setup specific
-    hypridle
-    hyprlock
-    hyprpaper
+    dunst
     waybar
     networkmanagerapplet
     ghostty

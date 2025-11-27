@@ -1,23 +1,26 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-    programs.hyprland = {
-        enable = true;
+  # Enable Hyprland
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+    xwayland.enable = true;
+  };
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
 
-        xwayland = {
-            enable = true;
-        };
+  programs.hyprlock.enable = true;
+  services.hypridle.enable = true;
 
-        portalPackage = pkgs.xdg-desktop-portal-hyprland;
-    };
-
-    xdg.portal.enable = true;
-    xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-
-    (pkgs.waybar.overrideAttrs (oldAttrs: {
-        mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-      })
-    )
-    
- 
+  environment.systemPackages = with pkgs; [
+    pyprland
+    hyprpicker
+    hyprcursor
+    hyprlock
+    hypridle
+    hyprpaper
+    hyprsunset
+    hyprpolkitagent
+  ];
 }
