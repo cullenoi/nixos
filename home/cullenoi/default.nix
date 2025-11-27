@@ -10,10 +10,13 @@
   home.homeDirectory = "/home/cullenoi";
   home.stateVersion = "25.05";
 
-
+  #cheeky little 
   home.file.".config/hypr".source = ../config/hypr;
   home.file.".config/waybar".source = ../config/waybar;
   home.file.".config/rofi".source = ../config/rofi;
+  home.file.".config/ghostty".source = ../config/ghostty;
+  # home.file.".config/swww".source = ../config/swww;
+
   programs.home-manager.enable = true;
   # programs.zsh.enable = true;
   # # Shell configuration

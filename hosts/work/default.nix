@@ -15,8 +15,16 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-    services.xserver.enable = true;
-
+  services.xserver = {
+    enable = true;
+    displayManager = {
+      lightdm.enable = false;
+      sddm = {
+        enable = true;
+        wayland.enable = true;  # Enable Wayland support in SDDM
+      };
+    };
+  };
   # Time and locale
   time.timeZone = "Europe/Dublin";
   i18n.defaultLocale = "en_IE.UTF-8";
@@ -47,7 +55,7 @@
   # Nix settings
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
-
+  
   # Default shell
 
   # Fonts
@@ -57,7 +65,7 @@
   # programs.mangowc.enable = true;
   # Environment variables
   environment.variables = {
-    XCURSOR_THEME = "Bibata-Modern-Classic";
+    XCURSOR_THEME = "Catppuccin-Macchiato-Teal";
     XCURSOR_SIZE = "24";
   };
 
@@ -77,20 +85,41 @@
   };
 
 ####
+
+## keyring:
+services.gnome.gnome-keyring.enable = true;
   environment.systemPackages = with pkgs; [
     tree
     vim
     wget
-    foot
+    #Setup specific
     waybar
-    kitty
+    networkmanagerapplet
     ghostty
+    catppuccin-cursors.macchiatoTeal
     # dolphin
-    wofi
+    rofi
     starship
     swww
+    #work related
     teams-for-linux
+    bitwarden-desktop
+    wireshark
+    screen
+    segger-jlink #CVE has to be called at this level so it doesnt afffect CT4
+    # segger-jlink-qt4-874
+    gcc-arm-embedded
+    cmake
+    ninja
+    dpkg
   ];
+##FOR ITS OWN CONFIG FILE LATER
+nixpkgs.config.permittedInsecurePackages = [
+                "segger-jlink-qt4-810"
+              ];
+  nixpkgs.config.segger-jlink.acceptLicense = true;#WORK around to allow segger by nix devs
+
+ 
 
     system.stateVersion = "25.05"; # Did you read the comment?
 
