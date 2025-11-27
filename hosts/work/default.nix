@@ -93,6 +93,9 @@ services.gnome.gnome-keyring.enable = true;
     vim
     wget
     #Setup specific
+    hypridle
+    hyprlock
+    hyprpaper
     waybar
     networkmanagerapplet
     ghostty
@@ -100,7 +103,6 @@ services.gnome.gnome-keyring.enable = true;
     # dolphin
     rofi
     starship
-    swww
     #work related
     teams-for-linux
     bitwarden-desktop
