@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
    imports = [
+    ./zsh.nix
     # ./programs
     # ./modules
     # ./services
