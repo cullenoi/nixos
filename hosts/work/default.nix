@@ -7,6 +7,8 @@
   imports = [ ./hardware-configuration.nix
   ../modules/bootloader.nix
   ../modules/hyprland.nix
+  ../modules/zsh.nix
+  ../modules/gtk.nix
   ../modules/theme.nix];
 
   # Bootloader
@@ -51,7 +53,8 @@
   users.users.cullenoi = {
     isNormalUser = true;
     description = "cullenoi";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "wireshark" ];
+    shell = pkgs.zsh;
   };
 
   # Nix settings
@@ -109,13 +112,13 @@ services.gnome.gnome-keyring.enable = true;
     dpkg
   ];
 ##FOR ITS OWN CONFIG FILE LATER
-nixpkgs.config.permittedInsecurePackages = [
-                "segger-jlink-qt4-810"
-              ];
+  nixpkgs.config.permittedInsecurePackages = [
+                  "segger-jlink-qt4-810"
+                ];
   nixpkgs.config.segger-jlink.acceptLicense = true;#WORK around to allow segger by nix devs
 
  
 
-    system.stateVersion = "25.05"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 
 }

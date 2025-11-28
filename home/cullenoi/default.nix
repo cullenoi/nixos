@@ -20,6 +20,15 @@
   # home.file.".config/swww".source = ../config/swww;
 
   programs.home-manager.enable = true;
+
+  #cursor
+  home.pointerCursor = {
+  gtk.enable = true;
+  x11.enable = true;
+  package = pkgs.bibata-cursors;
+  name = "Bibata-Modern-Classic";
+  size = 16;
+};
   # programs.zsh.enable = true;
   # # Shell configuration
   programs.zsh = {
