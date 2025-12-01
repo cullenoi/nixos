@@ -1,24 +1,36 @@
-{pkgs, ...}: 
- {
-  environment.systemPackages = [pkgs.sddm-astronaut];
+{ config, pkgs, ... }:
+
+let
+  custom-sddm-astronaut = pkgs.sddm-astronaut.override {
+    embeddedTheme = "pixel_sakura";
+  };
+
+in {
   services = {
     xserver.enable = true;
 
     displayManager = {
       sddm = {
-        wayland.enable = true;
-        enable = true;
-        package = pkgs.kdePackages.sddm;
-
-        theme = "sddm-astronaut";
-        extraPackages = [
-          pkgs.sddm-astronaut
+        enable        = true;
+        wayland.enable = true;          # keep your existing line
+        package       = pkgs.kdePackages.sddm; # or just pkgs.sddm
+        theme = "sddm-astronaut-theme";
+        settings = {
+          Theme = {
+          Current = "sddm-astronaut-theme";
+        # CursorTheme = "Bibata-Modern-Ice";
+        # CursorSize = 24;
+          };
+        };
+        extraPackages = with pkgs; [
+          custom-sddm-astronaut
         ];
-      };
-      autoLogin = {
-        enable = false;
-        user = "shawn";
       };
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    custom-sddm-astronaut
+    kdePackages.qtmultimedia
+  ];
 }

@@ -8,6 +8,7 @@
   ../modules/bootloader.nix
   ../modules/hyprland.nix
   ../modules/zsh.nix
+  ../modules/sddm.nix
   ../modules/theme.nix];
 
   # Bootloader
@@ -18,17 +19,17 @@
   # };
 
 
-  services.xserver = {
-    enable = true;
-    displayManager = {
-      lightdm.enable = false;
-      sddm = {
-        enable = true;
-        wayland.enable = true;  
-        theme = "catppuccin-macchiato";
-      };
-    };
-  };
+  # services.xserver = {
+  #   enable = true;
+  #   displayManager = {
+  #     lightdm.enable = false;
+  #     sddm = {
+  #       enable = true;
+  #       wayland.enable = true;  
+  #       theme = "catppuccin-macchiato";
+  #     };
+  #   };
+  # };
   # Time and locale
   time.timeZone = "Europe/Dublin";
   i18n.defaultLocale = "en_IE.UTF-8";
@@ -65,7 +66,7 @@
 
   # Fonts
   fonts.packages = with pkgs; [
-  nerd-fonts.meslo-lg
+  nerd-fonts
   ];
   # programs.mangowc.enable = true;
   # Environment variables
@@ -86,6 +87,9 @@
 services.gnome.gnome-keyring.enable = true;
 
   environment.systemPackages = with pkgs; [
+    #lazyvim
+    # neovim
+    #
     tree
     vim
     wget
