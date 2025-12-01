@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
    imports = [
-    ./zsh.nix
+    # ./zsh.nix
     # ./programs
     # ./modules
     # ./services
@@ -17,18 +17,11 @@
   home.file.".config/waybar".source = ../config/waybar;
   home.file.".config/rofi".source = ../config/rofi;
   home.file.".config/ghostty".source = ../config/ghostty;
+  # home.file."/etc/sddm.conf".source = ../config/sddm/sddm.conf;
   # home.file.".config/swww".source = ../config/swww;
 
   programs.home-manager.enable = true;
-
-  #cursor
-  home.pointerCursor = {
-  gtk.enable = true;
-  x11.enable = true;
-  package = pkgs.bibata-cursors;
-  name = "Bibata-Modern-Classic";
-  size = 16;
-};
+  
   # programs.zsh.enable = true;
   # # Shell configuration
   programs.zsh = {

@@ -8,7 +8,6 @@
   ../modules/bootloader.nix
   ../modules/hyprland.nix
   ../modules/zsh.nix
-  ../modules/gtk.nix
   ../modules/theme.nix];
 
   # Bootloader
@@ -25,7 +24,8 @@
       lightdm.enable = false;
       sddm = {
         enable = true;
-        wayland.enable = true;  # Enable Wayland support in SDDM
+        wayland.enable = true;  
+        theme = "catppuccin-macchiato";
       };
     };
   };
@@ -84,11 +84,14 @@
 
 ## keyring:
 services.gnome.gnome-keyring.enable = true;
+
   environment.systemPackages = with pkgs; [
     tree
     vim
     wget
     #Setup specific
+    catppuccin-sddm
+    bibata-cursors
     avizo
     wlogout
     dunst

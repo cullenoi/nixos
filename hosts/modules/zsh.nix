@@ -2,22 +2,28 @@
 
 {
 
-  users.defaultUserShell = pkgs.zsh;
-  programs.zsh.ohMyZsh.enable = true;
-  environment.systemPackages = with pkgs; [
-  zsh
-  zsh-completions
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  zsh-history-substring-search
-];
-  programs.zsh = {
-    enable = true;
-    # ohMyZsh = {
-    #   enable = true;
-    #   plugins = [ "git" "sudo" "docker" "npm" "node" ];
-    #   theme = "robbyrussell";
-    # };
-  };
+
+users.defaultUserShell = pkgs.zsh;
+environment.shells = with pkgs; [ zsh ];
+programs = {
+   zsh = {
+      enable = true;
+      autosuggestions.enable = true;
+      zsh-autoenv.enable = true;
+      syntaxHighlighting.enable = true;
+      ohMyZsh = {
+         enable = true;
+         theme = "candy";
+         plugins = [
+           "git"
+           "npm"
+           "history"
+           "node"
+           "rust"
+           "deno"
+         ];
+      };
+   };
+};
 }
 
