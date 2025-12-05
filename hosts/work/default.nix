@@ -3,9 +3,15 @@
 {
   networking.hostName = "work";
   networking.networkmanager.enable = true;
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 5000 ];   # open 5000/tcp
+    # allowedUDPPorts = [ ];     # add UDP here if you ever need it
+  };  
   # Work-specific hardware
   imports = [ ./hardware-configuration.nix
   ../modules/bootloader.nix
+  ../modules/lazyvim.nix
   ../modules/hyprland.nix
   ../modules/zsh.nix
   ../modules/sddm.nix
@@ -66,7 +72,7 @@
 
   # Fonts
   fonts.packages = with pkgs; [
-  nerd-fonts
+  nerd-fonts.meslo-lg
   ];
   # programs.mangowc.enable = true;
   # Environment variables
@@ -110,6 +116,7 @@ services.gnome.gnome-keyring.enable = true;
     teams-for-linux
     bitwarden-desktop
     wireshark
+    dsniff
     screen
     segger-jlink #CVE has to be called at this level so it doesnt afffect CT4
     # segger-jlink-qt4-874
@@ -118,6 +125,8 @@ services.gnome.gnome-keyring.enable = true;
     ninja
     dpkg
   ];
+  programs.wireshark.enable = true;
+  programs.thunderbird.enable = true;
 ##FOR ITS OWN CONFIG FILE LATER
   nixpkgs.config.permittedInsecurePackages = [
                   "segger-jlink-qt4-810"

@@ -6,7 +6,7 @@
     # ./modules
     # ./services
     # ./themes
-    ./neovim.nix
+    # ./neovim.nix
    ];
   home.username = "cullenoi";
   home.homeDirectory = "/home/cullenoi";

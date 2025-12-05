@@ -55,7 +55,7 @@ in
 
       xdg.configFile."nvim" = {
         recursive = true;
-        source = ../config/neovim/;
+        source = ../config/neovim;
       };
     };
   };
