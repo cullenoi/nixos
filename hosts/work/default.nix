@@ -11,7 +11,7 @@
   # Work-specific hardware
   imports = [ ./hardware-configuration.nix
   ../modules/bootloader.nix
-  ../modules/lazyvim.nix
+  # ../modules/lazyvim.nix
   ../modules/hyprland.nix
   ../modules/zsh.nix
   ../modules/sddm.nix
@@ -86,12 +86,12 @@
   security.pam.services.swaylock = {};
 
   programs.firefox.enable = true;
+  programs.neovim.enable = true;
 
 ####
 
 ## keyring:
 services.gnome.gnome-keyring.enable = true;
-
   environment.systemPackages = with pkgs; [
     #lazyvim
     # neovim
@@ -133,8 +133,12 @@ services.gnome.gnome-keyring.enable = true;
                 ];
   nixpkgs.config.segger-jlink.acceptLicense = true;#WORK around to allow segger by nix devs
 
- 
-
+  services.udev.extraRules = ''
+    # SEGGER J-Link (vendor 1366)
+    SUBSYSTEM!="usb", GOTO="jlink_rules_end"
+    ATTRS{idVendor}=="1366", MODE="0666"
+    LABEL="jlink_rules_end"
+  '';
   system.stateVersion = "25.05"; # Did you read the comment?
 
 }

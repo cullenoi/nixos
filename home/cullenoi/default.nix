@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
    imports = [
+    ./neovim.nix
     # ./zsh.nix
     # ./programs
     # ./modules
@@ -18,6 +19,7 @@
   home.file.".config/waybar".source = ../config/waybar;
   home.file.".config/rofi".source = ../config/rofi;
   home.file.".config/ghostty".source = ../config/ghostty;
+  # home.file.".config/neovim".source = ../config/nvim;
   # home.file."/etc/sddm.conf".source = ../config/sddm/sddm.conf;
   # home.file.".config/swww".source = ../config/swww;
 

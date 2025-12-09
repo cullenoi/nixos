@@ -4,59 +4,77 @@
   pkgs,
   ...
 }:
-with lib;
+###############################################################################
+#
+#  NvChad's configuration and all its dependencies(lsp, formatter, etc.)
+#
+#e#############################################################################
 let
-  cfg = config.nixchad.neovim;
+  shellAliases = {
+    v = "nvim";
+    vdiff = "nvim -d";
+  };
+  # the path to nvim directory
+  # to make this symlink work, we need to git clone this repo to your home directory.
+  configPath = "${config.home.homeDirectory}/nixos/home/config/neovim/nvim";
 in
 {
-  options.nixchad.neovim = {
-    enable = mkEnableOption "neovim";
-  };
+  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink configPath;
 
-  config = mkIf cfg.enable {
-    hm = {
-      home.sessionVariables = {
-        EDITOR = "nvim";
-      };
-      programs.nushell.environmentVariables = {
-        EDITOR = "nvim";
-      };
+  home.shellAliases = shellAliases;
+  programs.nushell.shellAliases = shellAliases;
 
-      programs.neovim = {
-        enable = true;
-        vimAlias = true;
-        vimdiffAlias = true;
-        withNodeJs = true;
+  programs = {
+    neovim = {
+      enable = true;
+      package = pkgs.neovim-unwrapped;
 
-        extraPackages = with pkgs; [
-          gcc # needed for nvim-treesitter
-          tree-sitter
+      # defaultEditor = true; # set EDITOR at system-wide level
+      viAlias = true;
+      vimAlias = true;
 
-          # HTML, CSS, JSON
-          vscode-langservers-extracted
+      # These environment variables are needed to build and run binaries
+      # with external package managers like mason.nvim.
+      #
+      # LD_LIBRARY_PATH is also needed to run the non-FHS binaries downloaded by mason.nvim.
+      # it will be set by nix-ld, so we do not need to set it here again.
+      extraWrapperArgs = with pkgs; [
+        # LIBRARY_PATH is used by gcc before compilation to search directories
+        # containing static and shared libraries that need to be linked to your program.
+        "--suffix"
+        "LIBRARY_PATH"
+        ":"
+        "${lib.makeLibraryPath [
+          stdenv.cc.cc
+          zlib
+        ]}"
 
-          # LazyVim defaults
-          stylua
-          shfmt
+        # PKG_CONFIG_PATH is used by pkg-config before compilation to search directories
+        # containing .pc files that describe the libraries that need to be linked to your program.
+        "--suffix"
+        "PKG_CONFIG_PATH"
+        ":"
+        "${lib.makeSearchPathOutput "dev" "lib/pkgconfig" [
+          stdenv.cc.cc
+          zlib
+        ]}"
+      ];
 
-          # Markdown extra
-          markdownlint-cli2
-          marksman
+      # Currently we use lazy.nvim as neovim's package manager, so comment this one.
+      #
+      # NOTE: These plugins will not be used by astronvim by default!
+      # We should install packages that will compile locally or download FHS binaries via Nix!
+      # and use lazy.nvim's `dir` option to specify the package directory in nix store.
+      # so that these plugins can work on NixOS.
+      #
+      # related project:
+      #  https://github.com/b-src/lazy-nix-helper.nvim
+      # plugins = with pkgs.vimPlugins; [
+      #   # search all the plugins using https://search.nixos.org/packages
+      #   telescope-fzf-native-nvim
 
-          # JSON and YAML extras
-          yaml-language-server
-
-          # Custom
-          editorconfig-checker
-          shellcheck
-          nixd
-        ];
-      };
-
-      xdg.configFile."nvim" = {
-        recursive = true;
-        source = ../config/neovim;
-      };
+      #   nvim-treesitter.withAllGrammars
+      # ];
     };
   };
 }
