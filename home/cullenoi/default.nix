@@ -1,7 +1,8 @@
 { config, pkgs, ... }:
 {
    imports = [
-    ./neovim.nix
+    ../config/nixvim/config/default.nix
+    # ./neovim.nix
     # ./zsh.nix
     # ./programs
     # ./modules
