@@ -1,7 +1,8 @@
-{ config, pkgs, ... }:
+{  config, pkgs,... }:
 {
    imports = [
-    ../config/nixvim/config/default.nix
+    # inputs.nixvim.homeManagerModules.nixvim 
+    # ../config/nixvim/config/default.nix
     # ./neovim.nix
     # ./zsh.nix
     # ./programs
@@ -10,6 +11,24 @@
     # ./themes
     # ./neovim.nix
    ];
+      programs.nixvim.enable = true;
+      programs.nixvim.imports = [ ../config/nixvim/config/default.nix];                      # 1. turn the module on
+
+  # programs.nixvim = {
+  #   enable = true;  
+  #   # imports = [    
+  #   #   ../config/nixvim/config/default.nix
+  #   # ];
+  #   /* ---------------------------------------------------------------
+  #      2.  put / override any nixvim options here.
+  #          (the files you imported will contribute their own
+  #          programs.nixvim.* options; this block is merged with them.)
+  #      --------------------------------------------------------------- */
+  #   # colorscheme = "tokyonight";           # example
+  #   vim.opt.number = true;                # example global vim option
+  #   vim.opt.relativenumber = true;
+  # };
+
   home.username = "cullenoi";
   home.homeDirectory = "/home/cullenoi";
   home.stateVersion = "25.05";
@@ -25,7 +44,8 @@
   # home.file.".config/swww".source = ../config/swww;
 
   programs.home-manager.enable = true;
-  
+    # programs.nixvim.imports = [ ./nixvim.nix ];
+  # programs.nixvim.enable = true;
   # programs.zsh.enable = true;
   # # Shell configuration
   programs.zsh = {

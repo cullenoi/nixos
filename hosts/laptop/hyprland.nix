@@ -42,6 +42,11 @@
     })
     ];
 
-
+    environment.systemPackages = with pkgs; [
+    grim         # screenshot core
+    slurp        # region selector
+    wl-clipboard # clipboard
+    grimblast    # convenient wrapper
+    ];
 
 }

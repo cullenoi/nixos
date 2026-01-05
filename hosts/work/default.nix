@@ -1,12 +1,18 @@
 { config, pkgs, ... }:
 
 {
+ 
   networking.hostName = "work";
   networking.networkmanager.enable = true;
   networking.firewall = {
     enable = true;
     allowedTCPPorts = [ 5000 ];   # open 5000/tcp
     # allowedUDPPorts = [ ];     # add UDP here if you ever need it
+    trustedInterfaces = [ "tailscale0" ];
+    # allow the Tailscale UDP port through the firewall
+    allowedUDPPorts = [ config.services.tailscale.port ];
+    # let you SSH in over the public internet
+    # networking.firewall.allowedTCPPorts = [ 22 ];
   };  
   # Work-specific hardware
   imports = [ ./hardware-configuration.nix
@@ -17,6 +23,9 @@
   ../modules/sddm.nix
   ../modules/theme.nix];
 
+
+  hardware.keyboard.qmk.enable = true;
+  hardware.bluetooth.enable = true; 
   # Bootloader
   # boot.loader.grub = {
   #   enable = true;
@@ -109,10 +118,12 @@ services.gnome.gnome-keyring.enable = true;
     networkmanagerapplet
     ghostty
     catppuccin-cursors.macchiatoTeal
-    # dolphin
+    kdePackages.dolphin
     rofi
     starship
+    brightnessctl
     #work related
+    tailscale
     teams-for-linux
     bitwarden-desktop
     wireshark
@@ -124,7 +135,21 @@ services.gnome.gnome-keyring.enable = true;
     cmake
     ninja
     dpkg
+    via
+    vial
+    brave
+    unzip
+    minicom
+    # alsa-notify
+    usbutils
+    blueman
+    libreoffice-qt
+    hunspell
+    hunspellDicts.uk_UA
+    hunspellDicts.th_TH
+    #
   ];
+  services.udev.packages = [ pkgs.via ];
   programs.wireshark.enable = true;
   programs.thunderbird.enable = true;
 ##FOR ITS OWN CONFIG FILE LATER
@@ -132,7 +157,7 @@ services.gnome.gnome-keyring.enable = true;
                   "segger-jlink-qt4-810"
                 ];
   nixpkgs.config.segger-jlink.acceptLicense = true;#WORK around to allow segger by nix devs
-
+  services.tailscale.enable = true;
   services.udev.extraRules = ''
     # SEGGER J-Link (vendor 1366)
     SUBSYSTEM!="usb", GOTO="jlink_rules_end"

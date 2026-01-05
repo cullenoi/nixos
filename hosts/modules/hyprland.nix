@@ -22,5 +22,9 @@
     hyprpaper
     hyprsunset
     hyprpolkitagent
+    grim         
+    slurp       
+    wl-clipboard 
+    grimblast    
   ];
 }
